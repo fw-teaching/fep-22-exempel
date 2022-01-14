@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lektion 1</title>
+</head>
+
+<body>
+    <h2>Lektion 1!</h2>
+
+    Skriv ditt namn:<input id="user-name">
+
+    <button onclick="hello()">Klicka här!</button>
+
+    <p id="reply-output">svaret kommer här</p>
+
+    <script>
+
+        /* funktion som hälsar på användaren */
+        function hello() {
+
+            let userName = document.getElementById("user-name").value;
+            //let userName = document.querySelector("#user-name").value;
+   
+            document.getElementById("reply-output").innerText = `Hello ${userName}!`;
+
+        }
+
+
+        function helloOldSchool() {
+
+            let userName = prompt("Skriv ditt namn");
+            alert("Hello " + userName + "!");
+        }
+
+    </script>
+</body>
+
+</html>
