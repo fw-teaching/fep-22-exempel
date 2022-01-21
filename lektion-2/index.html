@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Lektion 2</title>
+    </head>
+
+    <body>
+
+        <script>
+            /** Loop
+             */
+
+            for (let i = 1; i <= 10; i++) {
+                console.log("for: " + i)
+            }
+
+            let i = 1;
+            while (i <= 15) {
+                console.log("while: " +i);
+
+                if (i == 10) {
+                    break;
+                }
+                i++;
+            }
+
+            /** Villkorssatser
+             * 
+             * 
+             */
+
+            let temperatur = -20;
+            let vindstyrka = 12;
+
+            if (temperatur < 0 && temperatur > -15) {
+                console.log("Ut i skidspåret!")
+            } else if (temperatur <= -15 || vindstyrka > 10) {
+
+                if (temperatur <= -15) {
+                    console.log("För kallt!")
+                }
+                if (vindstyrka > 10) {
+                    console.log("För blåsigt")
+                }
+                
+            } else {
+                console.log("Kan vara slaskigt...")
+            }
+
+
+            /**
+             * Funktioner
+             */
+            const namn = "utanför funktionen";
+
+            function hello(namn) {
+                console.log("Hej " + namn);
+            } 
+
+            function hello2(namn) {
+                return "Hej " + namn;
+            }
+
+            //console.log("Utanför funktionen kommer vi inte åt 'namn' " + namn); // ERROR
+    
+            /*
+            hello("Fredde");
+    
+            console.log(hello2("Fredde2"));
+            let helloSvar = hello2("Fredde3"); //let helloSvar = "Hej Fredde2";
+            console.log(helloSvar);
+            */
+
+        </script>
+    </body>
+</html>
+
+
+    
+    
+
