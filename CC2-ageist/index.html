@@ -8,21 +8,34 @@
 </head>
 <body>
     
-    <script>
-        const bestAge = 42;
-        
-        // prompt är en funktion som returnerar det vi skrivit in
-        let inputAge = prompt("Hur gammal är du?"); 
+    Hur gammal är du? 
+    <input type="number" min="1" max="120" id="input-age" style="width: 50px;">
+    <button id="btn-ok" onclick="checkAge()">OK</button>
 
-        if (inputAge < bestAge) {
-            console.log("Barnrumpa.")
-        } else if (inputAge > bestAge) {
-            console.log("Ena foten i graven.")
-        } else {
-            console.log("En person i sina bästa år!")
+    <p id="reply"></p>
+    
+    <script>
+
+        function checkAge() {
+            
+            const bestAge = 42; // 39-45
+        
+            let inputAge = document.querySelector("#input-age").value;
+
+            let replyText = "En person i sina bästa år!";
+
+            if (inputAge < bestAge-3) {
+                replyText = "Barnrumpa.";
+            } else if (inputAge > bestAge+3) {
+                replyText = "Ena foten i graven.";
+            }
+
+            document.querySelector("#reply").innerText = replyText;
+
+            //console.log(inputAge);
         }
 
-        console.log(inputAge);
+
 
     </script>
 </body>
