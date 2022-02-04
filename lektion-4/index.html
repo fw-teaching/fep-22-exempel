@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lektion 4</title>
+</head>
+<body>
+    <h2>Lektion 4</h2>
+
+
+    <form method="post">
+        <p>
+            Huvudperson: 
+            <input type="text" id="huvudperson">
+        </p>
+        <p>
+            Pronomen:
+            <select id="pronomen">
+                <option>han</option>
+                <option>hon</option>
+                <option>hen</option>
+            </select>
+        </p>
+        <p>
+            Butik:<br>
+            <input type="radio" name="butik" value="mjölkbutiken"> Mjölkbutik<br>
+            <input type="radio" name="butik" value="R-kiosken"> R-kiosk
+        </p>
+        <p>
+            Vara:
+            <select id="vara">
+                <option value="mjölk">Mjölk</option>
+                <option value="läsk">Läsk</option>
+                <option value="öl">Öl</option>
+                <option value="vin">Vin</option>
+            </select>
+        </p>
+        <p>
+            <input type="button" 
+                value="Skriv sagan!"
+                onclick="skrivSaga()">
+        </p>
+        
+        <div id="sagan"></div>
+        
+    </form>
+
+
+    
+    <div style="display: none;">
+        <form method="post" action="tack.html">
+
+            <input id="minText" type="text">
+            <input type="password" name="passwd">
+
+            <input type="button" value="OK">
+
+
+            <button>Button-OK (default)</button> <!-- Funkar som default som submit! -->
+            <button type="button">Button-OK (type button)</button> <!-- Funkar som default som submit! -->
+            <input type="submit" value="Skicka">
+        </form>
+    </div>
+
+
+    <script src="script-4.js"></script>    
+</body>
+</html>
