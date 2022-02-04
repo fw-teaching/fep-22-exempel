@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Café</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Array Café</h2>
+
+    <ul id="products"></ul>
+    <div id="info"></div>
+
+    <script>
+        //      index:   0        1       2
+        const names = ["Kaffe", "Munk", "Glass"];
+        const prices = [3, 3.5, 4];
+        const stock = [100, 15, 45];
+
+        console.log("En "
+            + names[1] + " kostar "
+            + prices[1] + " och vi har "
+            + stock[1] + " på lager!");
+
+        console.log(`En ${names[0]} kostar ${prices[0]} och vi har ${stock[0]} st.`);
+        prices[0] = 5;
+        stock[0]--; // subtraherar 1
+        console.log(`En ${names[0]} kostar ${prices[0]} och vi har ${stock[0]} st.`);
+        stock[0] -= 1; // subtraherar 1 
+        console.log(`En ${names[0]} kostar ${prices[0]} och vi har ${stock[0]} st.`);
+        stock[0] = stock[0] - 1; // subtraherar 1 
+        console.log(`En ${names[0]} kostar ${prices[0]} och vi har ${stock[0]} st.`);
+
+        /**
+         * Vidareutveckling 1
+         */
+        console.log("--- Vidareutveckling 1")
+        for (let i = 0; i < names.length; i++) {
+            console.log(`En ${names[i]} kostar ${prices[i]} och vi har ${stock[i]} st.`);
+        }
+        /**
+         * Vidareutveckling 2
+         */
+        console.log("--- Vidareutveckling 2")
+        const products = [
+            { 
+                name: "Kaffe", 
+                price: 3,   
+                stock: 100 
+            },
+            { name: "Munk",  price: 3.5, stock: 15 },
+            { name: "Glass", price: 4,   stock: 45 },
+        ];
+
+        /**
+         * Vidareutveckling 3
+         */
+        function showInfo(i) {
+            document.querySelector("#info").innerHTML = "En "
+                + products[i].name + " kostar "
+                + products[i].price + " och vi har "
+                + products[i]['stock'] + " på lager!";
+
+        }
+        for (i in products) {
+            console.log("En "
+                + products[i].name + " kostar "
+                + products[i].price + " och vi har "
+                + products[i]['stock'] + " på lager!");
+
+            document.querySelector("#products").innerHTML += '<li onclick="showInfo('+i+')">'
+                + products[i].name + ": "
+                + products[i].price + " € </li>"
+
+        }
+
+    </script>
+</body>
+
+</html>
