@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Exempel på hur man räknar om sekunder till timmar, minuter och sekunder</p>
+    <input id="sec" type="text" placeholder="Sekunder">
+    <input type="button" onclick="calc()" value="Räkna">
+    <div id="out"></div>
+</body>
+
+    <script>
+        function calc() {
+            sekunderTotalt = document.querySelector("#sec").value;
+
+            // Math.floor() avrundar neråt
+            // (Math.ceil() avrundar uppåt, Math round() avrundar till närmaste)
+            minuter = Math.floor(sekunderTotalt / 60 % 60);
+            timmar = Math.floor(sekunderTotalt / 60 / 60);
+            sekunder = sekunderTotalt % 60; // Divisionsresten så kan den inte gå över 60
+            
+            /** Poängen med modulo (%, divisionsresten) är att 
+            * alltid börja pånytt från 1 och inte gå över 60, 
+            * Eftersom vår division returnerar ett decimaltal kan vi genom
+            * att använda Math.floor() hålla oss mellan 0 och 59
+            */
+            
+            document.querySelector("#out").innerText = `
+                ${timmar} h ${minuter} min ${sekunder} sek
+            `;
+        }
+
+    </script>
+
+</html>

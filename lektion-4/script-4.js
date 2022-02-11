@@ -1,9 +1,11 @@
 
-let sekunder = 600;
+let sekunder = 7400;
 document.getElementById("sek-output").innerText = sekunder;
+
 const countdown = setInterval(function() {
     sekunder--;
     document.getElementById("sek-output").innerText = sekunder;
+
     if (sekunder <= 0) {
         alert("Tiden är ute!");
         clearInterval(countdown);
