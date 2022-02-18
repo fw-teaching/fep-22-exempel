@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lektion 6</title>
+
+    <link rel="stylesheet" href="style-6.css">
+</head>
+<body>
+    <h2>Lektion 6</h2>
+
+    <h3>Gubben i lådan</h3>
+    
+    <div id="jack"></div>
+    <p>
+        Flytta på slidern och se vad som händer!<br>
+        <input type="range" id="slider" 
+            min="0" 
+            max="255" 
+            step="1"
+            value="0">
+    </p>
+    
+
+
+    <h3>Komma åt flera element</h3>
+    <div id="c1" class="click-me" data-color="red">Click me!</div>
+    <div id="c2" class="click-me" data-color="green">Click me!</div>
+    <div id="c3" class="click-me" data-color="blue">Click me!</div>
+    <div id="c4" class="click-me" data-color="purple">Click me!</div>
+    <input type="button" id="btn-reset" value="Reset">
+
+
+    <h3>Mera formulärgrejer</h3>
+    <p>
+        <!-- Placeholder -->
+        <label for="my-input">Jag repeterar allt du skriver:</label><br>
+        <input type="text" id="my-input" placeholder="Skriv en text">
+        <div id="repeat-output"></div>
+    </p>
+    <p>
+        <!-- Label gör att man kan klicka på rubriken -->
+        <label for="chk">Kryssa i den här checkboxen: </label>
+        <input id="chk" type="checkbox">
+    </p>
+    <p>
+        <!-- Textarea för längre texter -->
+        <label for="txt">Skriv en längre text:</label><br>
+        <textarea id="txt" 
+            name="txt" 
+            placeholder="Placeholder funkar också i textarea">
+        </textarea>
+    </p>
+
+    <script src="script-6.js"></script>
+</body>
+</html>

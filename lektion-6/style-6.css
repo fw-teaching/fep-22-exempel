@@ -1,0 +1,21 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#jack {
+    width: 400px;
+    height: 400px;
+    background-image: url('img/jack-closed.png');
+    /* Om man inte vill lagra bilden själv  
+        background-image: url('https://people.arcada.fi/~welandfr/demo/frontend/lektion-6/img/jack-closed.png');
+    */
+    border: 20px solid rgb(255,255,255);
+    border-radius: 20px;
+    cursor: pointer;
+}
+#jack:hover {
+    border-color: rgb(255,255,0);
+}
+
+.click-me {
+    cursor: pointer;
+}
